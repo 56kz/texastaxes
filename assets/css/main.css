@@ -8,76 +8,79 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
+
+
+.floating-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: #1abc9c;
+    /* flexbox centraliza o icone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position */
+    position: fixed;
+    bottom: 18px;
+    right: 75px;
+    /* transition usado no efeito do hover */
+    transition: .2s;
+    z-index: 10;
+}
+
+.floating-button svg {
+    /* deixa o icone em cima do texto */
+    width: 35px;
+    height: 35px;
+    position: relative;
+    z-index: 10;
+    fill: #fff;
+}
+
+.floating-button:hover {
+    /* faz o efeito do hover do botão */
+    transform: translateY(-4px);
+    /* remove o sublinhado */
+    text-decoration: none;
+}
+
+.floating-button .text-send {
+    /* tamanho e altura do texto */
+    height: 30px;
+    width: 10px;
+    /* esconde texto */
+    visibility: hidden;
+    opacity: 0;
+    /* position */
+    position: absolute;
+    right: 30px;
+    /* flexbox centraliza o texto */
+    display: flex;
+    align-items: center;
+    /* estilo */
+    font-size: 13px;
+    padding-left: 15px;
+    border-radius: 15px;
+    background: #1abc9c;
+    color: #fff;
+    /* transition usado no efeito do hover */
+    transition: .2s;
+    /* nao deixa o texto passar em cima do icone no menu */
+    overflow: hidden;
+    /* nao quebra o texto */
+    white-space: nowrap;
+}
+
+.floating-button:hover .text-send {
+    /* mostra o texto */
+    visibility: visible;
+    opacity: 1;
+    /* aumenta o tamanho do container do texto */
+    width: 150px;
+}
+
+
 /* Reset */
-
-	.floating-button {
-	    width: 50px;
-	    height: 50px;
-	    border-radius: 25px;
-	    background: #1abc9c;
-	    /* flexbox centraliza o icone */
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-	    /* position */
-	    position: fixed;
-	    bottom: 18px;
-	    right: 75px;
-	    /* transition usado no efeito do hover */
-	    transition: .2s;
-	    z-index: 10;
-	}
-
-	.floating-button svg {
-	    /* deixa o icone em cima do texto */
-	    width: 35px;
-	    height: 35px;
-	    position: relative;
-	    z-index: 10;
-	    fill: #fff;
-	}
-
-	.floating-button:hover {
-	    /* faz o efeito do hover do botão */
-	    transform: translateY(-4px);
-	    /* remove o sublinhado */
-	    text-decoration: none;
-	}
-
-	.floating-button .text-send {
-	    /* tamanho e altura do texto */
-	    height: 30px;
-	    width: 10px;
-	    /* esconde texto */
-	    visibility: hidden;
-	    opacity: 0;
-	    /* position */
-	    position: absolute;
-	    right: 30px;
-	    /* flexbox centraliza o texto */
-	    display: flex;
-	    align-items: center;
-	    /* estilo */
-	    font-size: 13px;
-	    padding-left: 15px;
-	    border-radius: 15px;
-	    background: #1abc9c;
-	    color: #fff;
-	    /* transition usado no efeito do hover */
-	    transition: .2s;
-	    /* nao deixa o texto passar em cima do icone no menu */
-	    overflow: hidden;
-	    /* nao quebra o texto */
-	    white-space: nowrap;
-	}
-
-	.floating-button:hover .text-send {
-	    /* mostra o texto */
-	    visibility: visible;
-	    opacity: 1;
-	    /* aumenta o tamanho do container do texto */
-	    width: 150px;
-	}
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -2139,7 +2142,7 @@
 		font-weight: 700;
 		margin: 0 0 1rem 0;
 	}
-
+input
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -2159,7 +2162,7 @@
 		text-decoration: none;
 		width: 100%;
 	}
-
+input
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
@@ -2199,7 +2202,6 @@
 		.select-wrapper select::-ms-expand {
 			display: none;
 		}
-
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
