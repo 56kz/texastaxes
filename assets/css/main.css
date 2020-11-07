@@ -2137,7 +2137,6 @@
 	}
 
 	label {
-		display: block;
 		font-size: 0.9rem;
 		font-weight: 700;
 		margin: 0 0 1rem 0;
@@ -2156,7 +2155,6 @@ input
 		border: none;
 		border: solid 1px;
 		color: inherit;
-		display: block;
 		outline: 0;
 		padding: 0 1rem;
 		text-decoration: none;
@@ -2173,7 +2171,6 @@ input
 
 	.select-wrapper {
 		text-decoration: none;
-		display: block;
 		position: relative;
 	}
 
@@ -2188,7 +2185,6 @@ input
 
 		.select-wrapper:before {
 			content: '\f078';
-			display: block;
 			height: 2.75rem;
 			line-height: 2.75rem;
 			pointer-events: none;
